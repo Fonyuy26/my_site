@@ -1,0 +1,102 @@
+body{
+    background: url("../images/admission.jpg");
+}
+
+.admission-hero {
+  background: url() center/cover no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  color: #000;
+}
+.admission-hero h1 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.admission-hero p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Main content styling */
+.admission-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 200px 0 0;
+}
+.admission-content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 18px;
+}
+.admission-content .highlight {
+  color: #e94b1b;
+}
+.admission-content h3 {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+/* Arrow list */
+.arrow-list {
+  list-style: none;
+  padding: 0;
+}
+.arrow-list li {
+  margin: 4px 0;
+}
+.arrow-list li::before {
+  content: "\2192";
+  color: #e94b1b;
+  margin-right: 8px;
+}
+
+/* Dot list */
+.dot-list {
+  list-style: none;
+  padding: 0;
+}
+.dot-list li {
+  margin: 6px 0;
+  position: relative;
+  padding-left: 20px;
+}
+.dot-list li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #e94b1b;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+@keyframes moveAndColor {
+  0% {
+    transform: translateX(0);
+    color: #000; /* Black */
+  }
+  25% {
+    transform: translateX(20px);
+    color: #1e90ff; /* Blue */
+  }
+  50% {
+    transform: translateX(-20px);
+    color: #ff6347; /* Tomato */
+  }
+  75% {
+    transform: translateX(10px);
+    color: #32cd32; /* Green */
+  }
+  100% {
+    transform: translateX(0);
+    color: #000; /* Back to black */
+  }
+}
+
+.moving-text {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: moveAndColor 3s infinite ease-in-out;
+}

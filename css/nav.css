@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    height: 100%;
+    font-family: Arial, Sans-serif;
+}
+.home-background{
+    background: url("../images/home.jpg") no-repeat center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+    color: #fff;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;   /* White background */
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #ddd; /* subtle bottom line */
+  position: relative;
+}
+
+/* Logo + Title */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-title img {
+  height: 60px;
+}
+
+.logo-title h1 {
+  font-size: 18px;
+  line-height: 1.2;
+  color: black;
+}
+
+.logo-title h1 span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* Navigation Links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 12px;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
+/* Active Page Highlight */
+.navbar ul li a.active {
+  background: red;
+  color: white;
+}
+
+.navbar ul li a:hover {
+  background: #f0f0f0;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: red;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.footer {
+  background: #f5f5f5; /* light background */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Left side */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: #003366; /* hover color */
+}
+
+/* Right side */
+.footer-right {
+  text-align: right;
+}
+
+.footer-right h3 {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  font-size: 30px; /* bigger icons */
+  margin-right: 10px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #003366; /* hover effect */
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+
+.social-icons a {
+  font-size: 30px; /* icon size */
+  margin-right: 10px;
+  color: #e21616;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effects */
+.social-icons a:hover {
+  color: #003366;         /* color change */
+  transform: scale(1.3) rotate(10deg); /* zoom + tilt */
+}
+
+/* Optional: continuous bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.social-icons a:hover i {
+  animation: bounce 0.6s; /* bounce once on hover */
+}
+
