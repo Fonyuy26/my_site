@@ -9,8 +9,9 @@ body{
   color: #000;
 }
 .admission-hero h1 {
-  font-size: 22px;
+  font-size: 25px;
   margin-bottom: 6px;
+  font-weight: bold;
 }
 .admission-hero p {
   font-size: 16px;
@@ -70,7 +71,27 @@ body{
   left: 0;
   top: 6px;
 }
-
+button {
+  display: block;
+  width: 30%;
+  background: #e94b1b;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 300px;
+  margin-top: 40px;
+}
+button:hover {
+  background: #c93c15;
+}
+button a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
 @keyframes moveAndColor {
   0% {
     transform: translateX(0);
@@ -86,7 +107,7 @@ body{
   }
   75% {
     transform: translateX(10px);
-    color: #32cd32; /* Green */
+    color: #44acdd; /* Green */
   }
   100% {
     transform: translateX(0);
@@ -94,7 +115,13 @@ body{
   }
 }
 
-.moving-text {
+.moving-text a {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: moveAndColor 3s infinite ease-in-out;
+}
+.moving-text  {
   display: inline-block;
   font-size: 2rem;
   font-weight: bold;
